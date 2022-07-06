@@ -25,7 +25,15 @@ closeButton.addEventListener('click', () => {
 })
 
 addButton.addEventListener('click', () => {
-    addBookToLibrary();
+    if(bookTitle.value == "" || bookAuthor.value == "" || bookPage.value == ""){
+        alert("Fill all the blanks");
+        new_book = bookTitle.value;
+        new_author = bookAuthor.value;
+        new_page = bookPage.value;
+    }else{
+        addButton.type = "reset";
+        addBookToLibrary();
+    }
 })
 
 //input change
@@ -78,6 +86,8 @@ function addBookToLibrary() {
     books.append(addedButton, booksAdded);
 
     let deleteButton = document.createElement('button');
+    deleteButton.classList.add('deleteButton')
+    deleteButton.innerText = 'x'
     addedButton.appendChild(deleteButton);
 
     let addedTitle = document.createElement('div');
@@ -98,4 +108,12 @@ function addBookToLibrary() {
     addedAuthor.innerText = book.author
     addedPages.innerText = book.pages
     anotherbutton.innerText = book.read
+
+    addCard.style.visibility = 'hidden';
+    deleteButton.addEventListener('click', () => {
+        let ind = myLibrary.findIndex((book) => book.title)
+        myLibrary.splice(ind, 1);
+        books.remove();
+    })
 }
+
