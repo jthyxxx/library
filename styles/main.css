@@ -1,0 +1,180 @@
+@font-face {
+  font-family: "NorseBold";
+  src: url("../Norse-Bold.otf");
+}
+body {
+  background: linear-gradient(45deg, rgb(46, 2, 73) 0%, rgb(87, 10, 87) 100%);
+  margin: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  height: 10%;
+  background-color: #a91079;
+}
+.header .title {
+  font-family: "NorseBold";
+  font-size: 5rem;
+  color: #2e0249;
+  letter-spacing: 5px;
+}
+.header .addBook {
+  height: 50px;
+  width: 130px;
+  font-family: "NorseBold";
+  font-size: 1.5rem;
+  background-color: #570a57;
+  color: #f806cc;
+  border-radius: 15px;
+  border: none;
+}
+.header .addBook:active {
+  border: 3px solid #f806cc;
+  font-size: 1.65rem;
+}
+
+.container {
+  margin: 1em;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 300px;
+  gap: 1em;
+}
+
+.books {
+  background: #f806cc;
+  border-radius: 15px;
+  padding: 1em;
+}
+
+.addedButton {
+  display: flex;
+  justify-content: flex-end;
+}
+.addedButton button {
+  height: 25px;
+  width: 25px;
+  background: #570a57;
+  border: none;
+  color: #f806cc;
+  border-radius: 3px;
+}
+.addedButton button:active {
+  border: 3px solid #a91079;
+  font-size: 1rem;
+}
+
+.bookAdded {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  color: #2e0249;
+  font-size: 1.5rem;
+}
+.bookAdded .addedTitle {
+  font-family: "NorseBold";
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+.bookAdded .addedRead button {
+  height: 40px;
+  width: 60px;
+  background: #2e0249;
+  border: none;
+  color: #f806cc;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.bookAdded .addedRead button:active {
+  border: 3px solid #a91079;
+  font-size: 1.2rem;
+}
+
+.addCard {
+  background: #f806cc;
+  height: 45.5vh;
+  width: 20vw;
+  position: fixed;
+  top: 25vh;
+  left: 40vw;
+  border-radius: 15px;
+  border: 5px solid #a91079;
+  visibility: hidden;
+}
+
+.bookLabel {
+  text-align: center;
+  font-family: "NorseBold";
+  font-size: 3em;
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  font-family: "Courier New", Courier, monospace;
+  align-items: center;
+  gap: 1em;
+  font-size: 1.5em;
+}
+form input {
+  height: 30px;
+  width: 90%;
+  background: #570a57;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  color: #f806cc;
+}
+
+.form-item {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  height: 30px;
+  background-color: #570a57;
+  border-radius: 5px;
+  color: #f806cc;
+}
+
+.haveRead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.close-add {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+.close-add button {
+  height: 35px;
+  width: 70px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: #570a57;
+  color: #f806cc;
+}
+.close-add button:active {
+  border: 2px sold #2e0249;
+  font-size: 1.2rem;
+}

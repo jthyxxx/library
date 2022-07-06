@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scrip.js" async></script>
+</head>
+<body>
+    <div class="header">
+        <div class="title">Library</div>
+        <div><button class="addBook" onclick="add()">+ Add Book</button></div>
+    </div>
+    <div class="addCard">
+        <div class="bookLabel">Book</div>
+        <form>
+            <div class="form-item">
+                <label for="book-title">Title</label>
+                <input type="text" id="book-title" name="book-title">
+            </div>
+            <div class="form-item">
+                <label for="book-author">Author</label>
+                <input type="text" id="book-author" name="book-author">
+            </div>
+            <div class="form-item">
+                <label for="book-page"># of Pages</label>
+                <input type="number" id="book-page" name="book-page">
+            </div>
+            <div class="haveRead">
+                <label for="read">Have read?</label>
+                <select class="read">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="close-add"><button type="button" class="justAdd">Add</button> <button class="close" type="reset">Close</button></div>
+        </form>
+    </div>
+    <div class="container">
+    </div>
+    </div>
+</body>
+</html>
